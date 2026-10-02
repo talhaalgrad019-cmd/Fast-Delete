@@ -1,19 +1,13 @@
 const { findByProps } = vendetta.metro;
 const { instead } = vendetta.patcher;
 
-// Flip to true to log every alert in the debug console
+// Set to true to log every alert in the debug console
 const DEBUG = false;
 
 const Alerts = findByProps("show", "close");
 const unpatches = [];
 
-const toText = (v) => {
-  try {
-    return typeof v === "string" ? v : "";
-  } catch {
-    return "";
-  }
-};
+const toText = (v) => (typeof v === "string" ? v : "");
 
 const isDeleteMessagePrompt = (props) => {
   const text = [
@@ -51,4 +45,6 @@ if (Alerts?.show) {
   console.error("[FastDelete] Alerts module not found");
 }
 
-export const onUnload = () => unpatches.forEach((u) => u());
+return {
+  onUnload: () => unpatches.forEach((u) => u()),
+}; 
