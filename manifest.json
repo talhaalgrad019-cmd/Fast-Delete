@@ -3,5 +3,6 @@
   "description": "Deletes messages instantly, no confirmation popup",
   "authors": [{ "name": "Abas2" }],
   "main": "index.js",
+  "hash": "4b83d2dd7016cd84f24be269e3bcf5aa34da3fd0e8193643884c6aa71f845690",
   "vendetta": { "icon": "ic_message_delete" }
 }
