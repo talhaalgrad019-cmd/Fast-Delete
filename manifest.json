@@ -1,0 +1,7 @@
+{
+  "name": "Fast Delete",
+  "description": "Deletes messages instantly, no confirmation popup",
+  "authors": [{ "name": "Abas2" }],
+  "main": "index.js",
+  "vendetta": { "icon": "ic_message_delete" }
+}
